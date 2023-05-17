@@ -4,8 +4,11 @@ import weatherIcon from "../utils/weatherIcon";
 function Location({data,location, setLocation}){
     // console.log(data[0].city)
     // find() to find matching object
-    const foundCity = data.find((obj) => obj.city === "Paris" )
+    const foundCity = data.find((obj) => obj.city === location )
     // console.log(foundCity)
+    if(foundCity===undefined){
+        return "NOT A VALID CITY";
+    }
     
     return (
         <> 
